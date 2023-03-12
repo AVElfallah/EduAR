@@ -56,20 +56,51 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Scripts\Outline.cs" />
+    <Compile Include="Assets\Scripts\Select Level\level comp\SpellingValues.cs" />
     <Compile Include="Assets\Scripts\Components Scripts\LevelButtonScript.cs" />
     <Compile Include="Assets\Scripts\Components Scripts\toggel_button.cs" />
     <Compile Include="Assets\Scripts\Select Level\TalkerScript.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\EnergyThresholdVAD.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\CloudDecoder.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\AudioProcessor.cs" />
+    <Compile Include="Assets\Speechly\Examples\PointAndTalk\UseSpeechly.cs" />
     <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\AssemblyInfo.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\AudioTools.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\IDecoder.cs" />
     <Compile Include="Assets\Scripts\Select Level\SpellingPref.cs" />
     <Compile Include="Assets\Scripts\button_click_sound.cs" />
+    <Compile Include="Assets\Scripts\Select Level\level comp\FindHiddenObjects.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\Types.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\Platform.cs" />
     <Compile Include="Assets\Scripts\EditSettings.cs" />
+    <Compile Include="Assets\Speechly\Examples\HandsFreeListening\UseSpeechly.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\WSClient.cs" />
+    <Compile Include="Assets\Scripts\Components Scripts\OnTouchGameObject.cs" />
+    <Compile Include="Assets\Scripts\Components Scripts\RequestSpeechlyByKeyWord.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\Segment.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\Token.cs" />
     <Compile Include="Assets\Scripts\LoadSettings.cs" />
+    <Compile Include="Assets\Speechly\Examples\HandsFreeListeningVR\UseSpeechly.cs" />
+    <Compile Include="Assets\Speechly\Examples\PushToTalkButton\UseSpeechly.cs" />
+    <Compile Include="Assets\Speechly\Examples\AudioFileToSpeechly\SpeechlyClientTest\SpeechlyClientTest.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\JSON.cs" />
+    <Compile Include="Assets\Speechly\Examples\AudioFileToSpeechly\SpeechlyTest.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\OnDeviceDecoder.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\SpeechlyClient.cs" />
+    <Compile Include="Assets\Speechly\MicToSpeechly.cs" />
     <Compile Include="Assets\Scripts\Components Scripts\LevelSoundTrackController.cs" />
     <Compile Include="Assets\Scripts\GameRouter.cs" />
-    <Compile Include="Assets\Model\classes\level_disc.cs" />
-    <Compile Include="Assets\Model\data\LevelData.cs" />
+    <Compile Include="Assets\Scripts\Select Level\level comp\UseTextToSpeech.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\Logger.cs" />
+    <Compile Include="Assets\Scripts\Components Scripts\OnSubLevelEnded.cs" />
     <Compile Include="Assets\Scripts\Select Level\ChangeLevelPage.cs" />
-    <Compile Include="Assets\Scripts\Select Level\TestLevelScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+    <None Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Readme.txt" />
+    <None Include="Assets\Speechly\link.xml" />
+    <None Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Resources\Shaders\OutlineFill.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

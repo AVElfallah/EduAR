@@ -12,16 +12,17 @@ public class LevelButtonScript : MonoBehaviour
     public GameObject disabledLevelBtn;
     public Text enabeldText;
     public Text disabledText;
-
-  public  string levelname;
+    public  string levelname;
     public string levelpath;
-    public bool enabled;
+    public bool isEnabled;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        enabledLevelBtn.GetComponent<Button>().onClick.AddListener(delegate(){
+        
+        enabledLevelBtn.GetComponent<Button>().onClick.AddListener(
+            delegate(){
             toLevel();
         }); 
         try
@@ -29,8 +30,8 @@ public class LevelButtonScript : MonoBehaviour
             enabeldText.text = levelname;
             disabledText.text = levelname;
 
-            enabledLevelBtn.SetActive(enabled);
-            disabledLevelBtn.SetActive(!enabled);
+            enabledLevelBtn.SetActive(isEnabled);
+            disabledLevelBtn.SetActive(!isEnabled);
 
         }
         catch(Exception ec)
@@ -45,7 +46,7 @@ public class LevelButtonScript : MonoBehaviour
     }
   public void  changeLevelValues(bool enabled)
     {
-        this.enabled = enabled;
+        this.isEnabled = enabled;
         enabledLevelBtn.SetActive(enabled);
         disabledLevelBtn.SetActive(!enabled);
     }

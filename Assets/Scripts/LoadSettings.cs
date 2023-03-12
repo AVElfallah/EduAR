@@ -23,7 +23,9 @@ public class LoadSettings : MonoBehaviour
         }
         catch (Exception e )
         {
-            Debug.LogWarning( e.ToString() ); 
+            Debug.LogWarning(
+                e.ToString() 
+                ); 
         }
     }
 

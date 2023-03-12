@@ -1,104 +1,95 @@
 using Meta.WitAi.TTS.Utilities;
+using Oculus.Voice.Demo;
+using Speechly.SLUClient;
 using System.Collections;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Windows.Speech;
 
 public class SpellingPref : MonoBehaviour
 {
     [SerializeField]
-  public  TTSSpeaker _speaker;
-  public  Text childText;
-  public  Text botText;
-  public  AudioClip tryAgain;
-  public  AudioClip verygood;
-  public  AudioSource audioSource;
-    public string[] commands= new string[3];
+    public TTSSpeaker _speaker;
+
+    public GameObject nextStep;
+    public Text botText;
+    public Text playerText;
+    public Slider SliderEnergy;
+    public Slider SliderBaselineEnergy;
+    public AudioClip tryAgain;
+    public AudioClip verygood;
+    public AudioSource audioSource;
+    public string[] commands = new string[3];
 
 
-    private int counter=0;
 
-    private ConfidenceLevel confidence = ConfidenceLevel.Medium;
-    private PhraseRecognizer recognizer;
+    private SpeechlyClient speechlyClient;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        Coroutine xcoroutine = StartCoroutine(InteractiveWithUser());
        
+        Coroutine xcoroutine = StartCoroutine(InteractiveWithUser());
+
     }
-    string word = "";
-    bool isSpellingEnd = false;
+
     IEnumerator InteractiveWithUser()
     {
+        string xst = "";
         for (int i = 0; i < commands.Length; i++)
         {
-           isSpellingEnd = false;
-             startSprlling:
-            counter = i;
-           botText.text = commands[i];
-            _speaker.Speak(commands[i]);
-       
-
-            string[] ar = { commands[i].ToUpper() };
-            if(recognizer != null)
-            {
-              
-            }
-            {
-                recognizer = new KeywordRecognizer(ar, ConfidenceLevel.Low);
-            }
+            string keyword = commands[i];
+            speechlyClient = MicToSpeechly.Instance.SpeechlyClient;
           
-            recognizer.OnPhraseRecognized += listenToChild;
-            recognizer.Start();
-            yield return new WaitForSeconds(10f);
+            _speaker.Speak(keyword);
 
-            if (!isSpellingEnd)
+            botText.text =keyword;
+            while (true)
             {
-                goto startSprlling;
+
+                SliderBaselineEnergy.value = speechlyClient.Output.NoiseLevelDb;
+                SliderEnergy.value = speechlyClient.Output.NoiseLevelDb + speechlyClient.Output.SignalDb;
+
+
+                
+
+                speechlyClient.OnSegmentChange += (segment) =>
+                {
+                    Debug.Log("inS");
+                    xst = segment.ToString((v) => "", (a, c) => "", "").Trim(' ').ToLower();
+              
+                    playerText.text = xst;
+                };
+                Debug.Log(xst);
+
+
+                if (xst.ToLower() == keyword)
+                {
+                    audioSource.PlayOneShot(verygood);
+                    yield return new WaitForSeconds(2.5f);
+                    Debug.Log("onStop");
+                    speechlyClient.Stop();
+                    speechlyClient.Shutdown();
+                    break;
+                }
+
+                yield return new WaitForSeconds(.5f);
             }
 
-            yield return new WaitForSeconds(2f);
-            if (i == commands.Length - 1)
-            {
-               
-                // Instantiate(_nextGameObject).SetActive(true);
-            }
-            /*  */
+            botText.text = "you are brilliant but now i've another request";
+            _speaker.Speak("you are brilliant but now i've another request");
+            yield return new WaitForSeconds(6f);
+            //    nextStep.SetActive(true);
+
         }
-    }
-    void listenToChild(PhraseRecognizedEventArgs args)
-    {
-        word = args.text;
-        childText.text = word;
-        if (word.ToLower() == commands[counter].ToLower())
+
+
+
+        // Update is called once per frame
+        void Update()
         {
-            Debug.Log("done!");
-            Debug.Log(args.text);
-            recognizer.Stop();
-            
-            audioSource.PlayOneShot(verygood);
-            isSpellingEnd=true;
-            recognizer=null;    
-           
 
         }
-        else
-        {
-            Debug.Log("error!!!!");
-            Debug.Log(args.text);
-            audioSource.PlayOneShot(tryAgain);
-        }
-       
-    }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

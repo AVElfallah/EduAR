@@ -11,6 +11,10 @@ public class GameRouter: MonoBehaviour
         SceneManager.LoadScene(1);
 
     }
+    public void GoToCustomLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+    }
     public void GoToMainPage() {
 
         SceneManager.LoadScene(0);

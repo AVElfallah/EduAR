@@ -17,19 +17,24 @@ public class ChangeLevelPage : MonoBehaviour
     void Start()
     {
         if (PlayerPrefs.HasKey("c_level")) {
+            Debug.Log("c_isFound");
             int cl = PlayerPrefs.GetInt("c_level");
+            Debug.Log(cl);
             for (int i=0;i<=cl;i++)
             {
                 var xi= levels[i].GetComponent<LevelButtonScript>();
                 xi.changeLevelValues(true);
-                Debug.Log(i);
+                
+            
                 Debug.Log(xi.name);
             }
 
         }
         else
         {
+            Debug.Log("not_isFound");
             PlayerPrefs.SetInt("c_level", 0);
+            PlayerPrefs.Save();
             var xi = levels[0].GetComponent<LevelButtonScript>();
             xi.changeLevelValues(true);
         }

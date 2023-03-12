@@ -20,6 +20,7 @@
 
 using Meta.WitAi;
 using Meta.WitAi.Json;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,11 +29,10 @@ namespace Oculus.Voice.Demo
     public class InteractionHandler : MonoBehaviour
     {
         [Header("Default States"), Multiline]
-        [SerializeField] private string freshStateText = "Try pressing the Activate button and saying \"Make the cube red\"";
+        [SerializeField] private string freshStateText = "- - -";
 
         [Header("UI")]
         [SerializeField] private Text textArea;
-        [SerializeField] private bool showJson;
 
         [Header("Voice")]
         [SerializeField] private AppVoiceExperience appVoiceExperience;
@@ -72,8 +72,7 @@ namespace Oculus.Voice.Demo
         // Request began
         private void OnRequestStarted(WitRequest r)
         {
-            // Store json on completion
-            if (showJson) r.onRawResponse = (response) => textArea.text = response;
+
             // Begin
             _active = true;
         }
@@ -95,35 +94,32 @@ namespace Oculus.Voice.Demo
         // Listen stop
         private void OnListenForcedStop()
         {
-            if (!showJson)
-            {
-                textArea.text = freshStateText;
-            }
+
+            textArea.text = freshStateText;
+
             OnRequestComplete();
         }
         // Request response
         private void OnRequestResponse(WitResponseNode response)
         {
-            if (!showJson)
+
+            if (!string.IsNullOrEmpty(response["text"]))
             {
-                if (!string.IsNullOrEmpty(response["text"]))
-                {
-                    textArea.text = "I heard: " + response["text"];
-                }
-                else
-                {
-                    textArea.text = freshStateText;
-                }
+                textArea.text =  response["text"];
             }
+            else
+            {
+                textArea.text = freshStateText;
+            }
+
             OnRequestComplete();
         }
         // Request error
         private void OnRequestError(string error, string message)
         {
-            if (!showJson)
-            {
-                textArea.text = $"<color=\"red\">Error: {error}\n\n{message}</color>";
-            }
+
+            textArea.text = $"<color=\"red\">Error: {error}\n\n{message}</color>";
+
             OnRequestComplete();
         }
         // Deactivate
@@ -140,18 +136,18 @@ namespace Oculus.Voice.Demo
         // Set activation
         public void SetActivation(bool toActivated)
         {
-            if (_active != toActivated)
+
+            _active = toActivated;
+            if (_active)
             {
-                _active = toActivated;
-                if (_active)
-                {
-                    appVoiceExperience.Activate();
-                }
-                else
-                {
-                    appVoiceExperience.Deactivate();
-                }
+                appVoiceExperience.Activate();
+
             }
+            else
+            {
+                appVoiceExperience.Deactivate();
+            }
+
         }
     }
 }
