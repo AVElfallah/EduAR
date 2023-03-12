@@ -22,6 +22,7 @@ namespace Meta.WitAi.TTS.Samples
         [SerializeField] private Button _speakQueuedButton;
 
         [SerializeField] private string[] _queuedText;
+        
 
         // States
         private bool _loading;
