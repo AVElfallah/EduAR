@@ -18,7 +18,7 @@ public class TalkerScript : MonoBehaviour
     private Task[] tasks = new Task[3];
     // Start is called before the first frame update
 
-   
+
     Coroutine xcoroutine;
 
 
@@ -37,15 +37,16 @@ public class TalkerScript : MonoBehaviour
 
             _text.GetComponent<Text>().text = text_array[i];
             _speaker.Speak(text_array[i]);
-            yield return new WaitForSeconds(1.25f);
-
-            yield return new WaitForSeconds(1.55f);
+            while (_speaker.IsSpeaking || _speaker.IsLoading)
+            {
+                yield return null;
+            }
+            yield return new WaitForSeconds(.5f);
             if (i == tasks.Length - 1)
             {
                 Debug.Log("end welcoming");
                 _nextGameObject.GetComponent<SpellingValues>().SpellingAllValues();
 
-            //    _nextGameObject.GetComponent<UseTextToSpeech>().StartSpelling();
 
                 break;
             }
@@ -56,14 +57,5 @@ public class TalkerScript : MonoBehaviour
 
 
 
-    void Update()
-    {
-
-    }
-
-    private void OnDisable()
-    {
-
-      
-    }
+    
 }

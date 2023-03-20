@@ -28,14 +28,14 @@ public class FindHiddenObjects : MonoBehaviour
 
     void Start()
     {
-       
+
         Coroutine x = StartCoroutine(PlayAndLearn());
     }
 
- 
 
 
-  
+
+
 
     /// Play and learn the game. This is the main loop of the game. It will loop until the user presses enter
 
@@ -44,21 +44,21 @@ public class FindHiddenObjects : MonoBehaviour
         var speakIt = $"There are {_objectCount} hidden {objectsName} in your place.\nFind them.";
         botText.text = speakIt;
         _speaker.Speak(speakIt);
-       
-        _objectPrefab.transform.position = new Vector3(Random.Range(0, distance), Random.Range(0, distance), moveFromZ) ;
+
+        _objectPrefab.transform.position = new Vector3(Random.Range(0, distance), Random.Range(0, distance), moveFromZ);
         _objectPrefab.GetComponent<OnTouchGameObject>().TouchAllowing();
-   
+
 
         /// Creates a random object prefab and then calls Instantiate onTouchGameObject. touchAllowing on the object prefab.
 
-        for (int i = 0; i < _objectCount; i++)
+        for (int i = 1; i < _objectCount; i++)
         {
-            var pos = new Vector3(Random.Range(0, distance)/i, Random.Range(0, distance)/i, moveFromZ);
-            var xprefab = Instantiate(_objectPrefab, pos,_objectPrefab.transform.localRotation);
-           xprefab.GetComponent<OnTouchGameObject>().TouchAllowing();
-       
+            var pos = new Vector3(Random.Range(0, distance) / i, Random.Range(0, distance) / i, moveFromZ);
+            var xprefab = Instantiate(_objectPrefab, pos, _objectPrefab.transform.localRotation);
+            xprefab.GetComponent<OnTouchGameObject>().TouchAllowing();
+
         }
-      _objectPrefab.SetActive(false);
+      //  _objectPrefab.SetActive(false);
 
 
 
@@ -72,21 +72,21 @@ public class FindHiddenObjects : MonoBehaviour
 
             if (countObjectes == _objectCount)
             {
-                botText.text="Very good.\n you have achieved a good progress";
+                botText.text = "Very good.\n you have achieved a good progress";
                 _speaker.Speak("Very good, you have achieved a good progress");
-                
+
                 break;
             }
-            
+
             yield return new WaitForSeconds(.4f);
         }
-        
+
         yield return new WaitForSeconds(4);
         nextEvent.Invoke();
         this.gameObject.SetActive(false);
-      
+
     }
-    
+
     // Update is called once per frame
 
     /// Updates the state of the object. This is called every frame to ensure that the object is up to date
