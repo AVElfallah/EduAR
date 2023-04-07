@@ -34,19 +34,24 @@ public class TalkerScript : MonoBehaviour
     {
         for (int i = 0; i < tasks.Length; i++)
         {
-
+            // speak the text while text is in the queue
+            if(i<tasks.Length){
             _text.GetComponent<Text>().text = text_array[i];
             _speaker.Speak(text_array[i]);
+            }
+            // wait until the text is spoken
             while (_speaker.IsSpeaking || _speaker.IsLoading)
             {
                 yield return null;
             }
+            // wait for a bit to give the user time to read the text
             yield return new WaitForSeconds(.5f);
-            if (i == tasks.Length - 1)
+            // end the coroutine if the text is the last one
+            if (i>= tasks.Length-1 )
             {
                 Debug.Log("end welcoming");
                 _nextGameObject.GetComponent<SpellingValues>().SpellingAllValues();
-
+                StopCoroutine(xcoroutine);
 
                 break;
             }
@@ -56,6 +61,13 @@ public class TalkerScript : MonoBehaviour
     }
 
 
+/// <summary>
+/// This function is called when the MonoBehaviour will be destroyed.
+/// </summary>
+void OnDestroy()
+{
+   //StopAllCoroutines();
+}
 
     
 }

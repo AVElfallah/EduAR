@@ -39,7 +39,6 @@ public class ChangeLevelPage : MonoBehaviour
             xi.changeLevelValues(true);
         }
 
-       
 
     }
     public void leftChangePage()

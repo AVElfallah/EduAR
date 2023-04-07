@@ -37,11 +37,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\Requests\WitVRequestFactory.cs" />
-     <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\AssemblyInfo.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\Requests\IWitInfoVRequest.cs" />
+     <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\WitAppInfoUtility.cs" />
+     <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\AssemblyInfo.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\WitEditorConstants.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\Requests\WitInfoVRequest.cs" />
-     <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\WitAppInfoUtility.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\Requests\WitSyncVRequest.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\Requests\IWitSyncVRequest.cs" />
      <None Include="Assets\Oculus\Voice\Lib\Wit.ai\Lib\Wit\Editor\Meta.WitAI.Lib.Editor.asmdef" />

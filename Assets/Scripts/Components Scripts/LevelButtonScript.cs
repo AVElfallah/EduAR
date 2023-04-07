@@ -12,19 +12,21 @@ public class LevelButtonScript : MonoBehaviour
     public GameObject disabledLevelBtn;
     public Text enabeldText;
     public Text disabledText;
-    public  string levelname;
+    public string levelname;
     public string levelpath;
     public bool isEnabled;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        enabledLevelBtn.GetComponent<Button>().onClick.AddListener(
-            delegate(){
-            toLevel();
-        }); 
+        enabledLevelBtn
+            .GetComponent<Button>()
+            .onClick.AddListener(
+                delegate()
+                {
+                    toLevel();
+                }
+            );
         try
         {
             enabeldText.text = levelname;
@@ -32,19 +34,19 @@ public class LevelButtonScript : MonoBehaviour
 
             enabledLevelBtn.SetActive(isEnabled);
             disabledLevelBtn.SetActive(!isEnabled);
-
         }
-        catch(Exception ec)
+        catch (Exception ec)
         {
             Debug.LogError(ec);
         }
-       
     }
+
     private void toLevel()
     {
         SceneManager.LoadScene(levelpath);
     }
-  public void  changeLevelValues(bool enabled)
+
+    public void changeLevelValues(bool enabled)
     {
         this.isEnabled = enabled;
         enabledLevelBtn.SetActive(enabled);
@@ -52,8 +54,5 @@ public class LevelButtonScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update() { }
 }

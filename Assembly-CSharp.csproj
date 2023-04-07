@@ -37,47 +37,47 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Scripts\Outline.cs" />
-     <Compile Include="Assets\Scripts\Select Level\level comp\SpellingValues.cs" />
-     <Compile Include="Assets\Scripts\Components Scripts\LevelButtonScript.cs" />
-     <Compile Include="Assets\Scripts\Components Scripts\toggel_button.cs" />
-     <Compile Include="Assets\Scripts\Select Level\TalkerScript.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\EnergyThresholdVAD.cs" />
-     <Compile Include="Assets\Speechly\SpeechlyClient\CloudDecoder.cs" />
-     <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\AudioProcessor.cs" />
      <Compile Include="Assets\Speechly\Examples\PointAndTalk\UseSpeechly.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\AssemblyInfo.cs" />
-     <Compile Include="Assets\Scripts\GameQuit.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\AudioTools.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\IDecoder.cs" />
      <Compile Include="Assets\Scripts\button_click_sound.cs" />
      <Compile Include="Assets\Scripts\Select Level\level comp\FindHiddenObjects.cs" />
-     <Compile Include="Assets\Speechly\SpeechlyClient\Types.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\Platform.cs" />
      <Compile Include="Assets\Scripts\EditSettings.cs" />
+     <Compile Include="Assets\Scripts\Select Level\level comp\HideShowMenu.cs" />
      <Compile Include="Assets\Speechly\Examples\HandsFreeListening\UseSpeechly.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\WSClient.cs" />
      <Compile Include="Assets\Scripts\Select Level\level comp\EndLevelScript.cs" />
      <Compile Include="Assets\Scripts\Components Scripts\OnTouchGameObject.cs" />
-     <Compile Include="Assets\Scripts\Select Level\level comp\TestUsingText.cs" />
-     <Compile Include="Assets\Scripts\Components Scripts\RequestSpeechlyByKeyWord.cs" />
+     <Compile Include="Assets\Scripts\Select Level\level comp\UsingTextSpeech.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\Segment.cs" />
-     <Compile Include="Assets\Speechly\SpeechlyClient\Token.cs" />
-     <Compile Include="Assets\Scripts\LoadSettings.cs" />
-     <Compile Include="Assets\Speechly\Examples\HandsFreeListeningVR\UseSpeechly.cs" />
-     <Compile Include="Assets\Scripts\Select Level\level comp\AnimateACustomLetter.cs" />
      <Compile Include="Assets\Speechly\Examples\PushToTalkButton\UseSpeechly.cs" />
-     <Compile Include="Assets\Speechly\Examples\AudioFileToSpeechly\SpeechlyClientTest\SpeechlyClientTest.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\JSON.cs" />
      <Compile Include="Assets\Speechly\Examples\AudioFileToSpeechly\SpeechlyTest.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\OnDeviceDecoder.cs" />
-     <Compile Include="Assets\Speechly\SpeechlyClient\SpeechlyClient.cs" />
-     <Compile Include="Assets\Speechly\MicToSpeechly.cs" />
-     <Compile Include="Assets\Scripts\Components Scripts\LevelSoundTrackController.cs" />
      <Compile Include="Assets\Scripts\GameRouter.cs" />
-     <Compile Include="Assets\Scripts\Select Level\level comp\UseTextToSpeech.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\Logger.cs" />
      <Compile Include="Assets\Scripts\Components Scripts\OnSubLevelEnded.cs" />
      <Compile Include="Assets\Scripts\Select Level\ChangeLevelPage.cs" />
+     <Compile Include="Assets\Scripts\Select Level\level comp\SpellingValues.cs" />
+     <Compile Include="Assets\Scripts\Components Scripts\LevelButtonScript.cs" />
+     <Compile Include="Assets\Scripts\Components Scripts\toggel_button.cs" />
+     <Compile Include="Assets\Scripts\Select Level\TalkerScript.cs" />
+     <Compile Include="Assets\Speechly\SpeechlyClient\CloudDecoder.cs" />
+     <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\AudioProcessor.cs" />
+     <Compile Include="Assets\Scripts\GameQuit.cs" />
+     <Compile Include="Assets\Speechly\SpeechlyClient\Types.cs" />
+     <Compile Include="Assets\Scripts\Select Level\level comp\NetworkConnectionChecker.cs" />
+     <Compile Include="Assets\Scripts\Select Level\level comp\GamesRunner.cs" />
+     <Compile Include="Assets\Speechly\SpeechlyClient\Token.cs" />
+     <Compile Include="Assets\Scripts\LoadSettings.cs" />
+     <Compile Include="Assets\Speechly\Examples\HandsFreeListeningVR\UseSpeechly.cs" />
+     <Compile Include="Assets\Speechly\Examples\AudioFileToSpeechly\SpeechlyClientTest\SpeechlyClientTest.cs" />
+     <Compile Include="Assets\Speechly\SpeechlyClient\SpeechlyClient.cs" />
+     <Compile Include="Assets\Speechly\MicToSpeechly.cs" />
+     <Compile Include="Assets\Scripts\Components Scripts\LevelSoundTrackController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -750,9 +750,9 @@
       <Project>{63666b48-67a7-18a5-ef8c-642a578c7f20}</Project>
       <Name>AssistantCoreSDKEditor</Name>
     </ProjectReference>
-    <ProjectReference Include="Oculus.Voice.Demo.csproj">
-      <Project>{8ff1c11f-221b-5cce-153f-3055679df0ad}</Project>
-      <Name>Oculus.Voice.Demo</Name>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{35cdbde2-2167-a2f3-963d-ad6fdb863152}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj">
       <Project>{9cd23dc9-060b-6c59-c20c-900be840ffe8}</Project>
@@ -761,6 +761,10 @@
     <ProjectReference Include="Unity.InternalAPIEngineBridge.007.csproj">
       <Project>{96a949d5-3930-cce9-75a4-235a50e03f54}</Project>
       <Name>Unity.InternalAPIEngineBridge.007</Name>
+    </ProjectReference>
+    <ProjectReference Include="Oculus.Voice.Demo.csproj">
+      <Project>{8ff1c11f-221b-5cce-153f-3055679df0ad}</Project>
+      <Name>Oculus.Voice.Demo</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.VoiceSDK.Mic.Common.csproj">
       <Project>{b373efe8-b598-bfad-6bf5-881cc5c9f44b}</Project>
@@ -934,13 +938,17 @@
       <Project>{044c7cea-4b82-9fd9-fbd8-67999c033cef}</Project>
       <Name>Unity.XR.ARKit.FaceTracking.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{edfd8595-8499-2941-3ea3-b6d70e714443}</Project>
-      <Name>Unity.VisualScripting.Core.Editor</Name>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{5713bb44-73cc-f6b8-4615-4a81d104ef53}</Project>
+      <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Editor.csproj">
       <Project>{d9ce978a-8512-91df-44f9-99d0a2b4c556}</Project>
       <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
+      <Project>{edfd8595-8499-2941-3ea3-b6d70e714443}</Project>
+      <Name>Unity.VisualScripting.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
       <Project>{92040c93-d861-c12a-c8da-276966a9c6ca}</Project>
@@ -953,6 +961,10 @@
     <ProjectReference Include="Unity.Subsystem.Registration.csproj">
       <Project>{864cba48-3c43-671d-1a23-d954527f45db}</Project>
       <Name>Unity.Subsystem.Registration</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
+      <Project>{d7273174-bdbb-92cf-da15-5e831cf441ab}</Project>
+      <Name>Unity.Postprocessing.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
       <Project>{d292cf55-7f28-dace-2583-cd3e4b050a53}</Project>
@@ -1001,6 +1013,10 @@
     <ProjectReference Include="Unity.Burst.csproj">
       <Project>{e0ab49d0-41af-1840-255d-00b0b2e1d778}</Project>
       <Name>Unity.Burst</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
+      <Project>{b2ea21a9-c926-4bb9-d19b-72fa1f808a20}</Project>
+      <Name>Unity.Postprocessing.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Editor.csproj">
       <Project>{3e67ca4e-e6c3-08af-7dfe-28c06498ad01}</Project>
@@ -1089,22 +1105,6 @@
     <ProjectReference Include="Unity.XR.ARFoundation.csproj">
       <Project>{437c8f19-ce7a-3df4-f2af-d19caecba65d}</Project>
       <Name>Unity.XR.ARFoundation</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{5713bb44-73cc-f6b8-4615-4a81d104ef53}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{35cdbde2-2167-a2f3-963d-ad6fdb863152}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{d7273174-bdbb-92cf-da15-5e831cf441ab}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{b2ea21a9-c926-4bb9-d19b-72fa1f808a20}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

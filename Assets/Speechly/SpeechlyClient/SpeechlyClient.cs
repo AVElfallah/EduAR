@@ -1,3 +1,4 @@
+using System.Globalization;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -5,6 +6,8 @@ using System.Collections.Generic;
 using System.Collections.Concurrent;
 using Speechly.Types;
 using Speechly.Tools;
+using UnityEngine;
+using Logger = Speechly.Tools.Logger;
 
 namespace Speechly.SLUClient {
 
@@ -25,6 +28,7 @@ namespace Speechly.SLUClient {
 /// </summary>
 
   public class SpeechlyClient {
+  
 
 /// <summary>
 /// Read the combined results of automatic speech recoginition (ASR) and natural language detection (NLU).

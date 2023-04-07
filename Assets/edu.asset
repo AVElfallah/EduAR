@@ -20,11 +20,104 @@ MonoBehaviour:
     isPrivate: 0
     createdAt: 2023-02-22T20:33:50-0800
     trainingStatus: 1
-    lastTrainDuration: 0
-    lastTrainedAt: 1969-12-31T16:00:00-0800
-    nextTrainAt: 1969-12-31T16:00:00-0800
-    intents: []
-    entities: []
+    lastTrainDuration: 47
+    lastTrainedAt: 2023-04-04T23:36:12-0700
+    nextTrainAt: 2023-04-04T23:35:25-0700
+    intents:
+    - id: 606988651012341
+      name: ab
+      entities:
+      - name: single_letter:single_letter
+        id: 1554770831852774
+    entities:
+    - name: single_letter
+      id: 590713206112363
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: single_letter
+        id: 1554770831852774
+      keywords:
+      - keyword: a
+        synonyms:
+        - a
+        - aa
+        - ah
+        - ao
+        - ay
+      - keyword: b
+        synonyms:
+        - b
+      - keyword: c
+        synonyms:
+        - c
+      - keyword: e
+        synonyms:
+        - e
+      - keyword: f
+        synonyms:
+        - f
+      - keyword: g
+        synonyms:
+        - g
+      - keyword: h
+        synonyms:
+        - h
+      - keyword: i
+        synonyms:
+        - i
+      - keyword: j
+        synonyms:
+        - j
+      - keyword: k
+        synonyms:
+        - k
+      - keyword: l
+        synonyms:
+        - l
+      - keyword: m
+        synonyms:
+        - m
+      - keyword: n
+        synonyms:
+        - n
+      - keyword: o
+        synonyms:
+        - o
+      - keyword: p
+        synonyms:
+        - p
+      - keyword: q
+        synonyms:
+        - q
+      - keyword: r
+        synonyms:
+        - r
+      - keyword: s
+        synonyms:
+        - s
+      - keyword: t
+        synonyms:
+        - t
+      - keyword: u
+        synonyms:
+        - u
+      - keyword: v
+        synonyms:
+        - v
+      - keyword: w
+        synonyms:
+        - w
+      - keyword: x
+        synonyms:
+        - x
+      - keyword: y
+        synonyms:
+        - y
+      - keyword: z
+        synonyms:
+        - z
     traits: []
     voices:
     - name: Charlie

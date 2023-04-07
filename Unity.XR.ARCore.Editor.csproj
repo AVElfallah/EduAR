@@ -36,14 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\AssemblyInfo.cs" />
      <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\Gradle.cs" />
      <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\Java.cs" />
      <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\ARCoreImageLibraryBuildProcessor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\Cli.cs" />
+     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\AssemblyInfo.cs" />
      <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\ARCorePackageMetadata.cs" />
      <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\ArCoreImg.cs" />
      <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\ARCoreSettings.cs" />
-     <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\Cli.cs" />
      <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\ARCoreBuildProcessor.cs" />
      <Compile Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\ARCoreSettingsProvider.cs" />
      <None Include="Library\PackageCache\com.unity.xr.arcore@4.2.7\Editor\Unity.XR.ARCore.Editor.asmdef" />

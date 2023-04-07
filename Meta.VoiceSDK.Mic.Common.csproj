@@ -36,10 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Scripts\Runtime\Lib\Mic\Common\MicDebug.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Scripts\Runtime\Lib\Mic\Common\MicBase.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Scripts\Runtime\Lib\Mic\Common\AudioEncoding.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Scripts\Runtime\Lib\Mic\Common\IAudioInputSource.cs" />
+     <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\Scripts\Runtime\Lib\Mic\Common\MicDebug.cs" />
      <None Include="Assets\Oculus\Voice\Lib\Wit.ai\Scripts\Runtime\Lib\Mic\Common\Meta.VoiceSDK.Mic.Common.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity Hub\2021.3.16f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

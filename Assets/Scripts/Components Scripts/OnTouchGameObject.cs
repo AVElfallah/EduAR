@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Threading.Tasks;
 
 public class OnTouchGameObject : MonoBehaviour
 {
 
     private bool isTouched = false;
     public bool isAllowToBeTouched => isTouched;
+
+
     public Text counter;
     // Start is called before the first frame update
 
@@ -35,10 +38,11 @@ public class OnTouchGameObject : MonoBehaviour
                 if (Physics.Raycast(ray, out hit))
                 {
                     Debug.Log("Touched " + hit.transform.gameObject.name);
-                    
-                    Debug.Log("Touched " + hit.transform.gameObject.name);
+
                     // Destroy the game object that was touched
+
                     Destroy(hit.transform.gameObject);
+
                 }
 
             }
@@ -48,8 +52,8 @@ public class OnTouchGameObject : MonoBehaviour
 
     private void OnDestroy()
     {
-        int xi = int.Parse(counter.text);
-        xi += 1;
-        counter.text = xi.ToString();
+                                // int xi = int.Parse(counter.text);
+                                // xi += 1;
+                                // counter.text = xi.ToString();
     }
 }

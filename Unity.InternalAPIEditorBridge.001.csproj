@@ -36,10 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Editor\InternalBridge\AssemblyInfo.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Editor\InternalBridge\TexturePlatformSettings\TexturePlatformSettings.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Editor\InternalBridge\TexturePlatformSettings\TexturePlatformSettings_Before_2021_3_9f1.cs" />
      <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Editor\InternalBridge\InternalEditorBridge.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Editor\InternalBridge\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.common@6.0.6\Editor\InternalBridge\TexturePlatformSettings\TexturePlatformSettings.cs" />
      <None Include="Library\PackageCache\com.unity.2d.common@6.0.6\Editor\InternalBridge\InternalBridgeDef.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity Hub\2021.3.16f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
