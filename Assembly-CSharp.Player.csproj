@@ -57,50 +57,74 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Scripts\Outline.cs" />
-    <Compile Include="Assets\Scripts\Select Level\level comp\SpellingValues.cs" />
-    <Compile Include="Assets\Scripts\Components Scripts\LevelButtonScript.cs" />
-    <Compile Include="Assets\Scripts\Components Scripts\toggel_button.cs" />
-    <Compile Include="Assets\Scripts\Select Level\TalkerScript.cs" />
     <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\EnergyThresholdVAD.cs" />
-    <Compile Include="Assets\Speechly\SpeechlyClient\CloudDecoder.cs" />
-    <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\AudioProcessor.cs" />
     <Compile Include="Assets\Speechly\Examples\PointAndTalk\UseSpeechly.cs" />
     <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\AssemblyInfo.cs" />
     <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\AudioTools.cs" />
     <Compile Include="Assets\Speechly\SpeechlyClient\IDecoder.cs" />
-    <Compile Include="Assets\Scripts\Select Level\SpellingPref.cs" />
     <Compile Include="Assets\Scripts\button_click_sound.cs" />
     <Compile Include="Assets\Scripts\Select Level\level comp\FindHiddenObjects.cs" />
-    <Compile Include="Assets\Speechly\SpeechlyClient\Types.cs" />
     <Compile Include="Assets\Speechly\SpeechlyClient\Platform.cs" />
     <Compile Include="Assets\Scripts\EditSettings.cs" />
+    <Compile Include="Assets\Scripts\Select Level\level comp\HideShowMenu.cs" />
     <Compile Include="Assets\Speechly\Examples\HandsFreeListening\UseSpeechly.cs" />
     <Compile Include="Assets\Speechly\SpeechlyClient\WSClient.cs" />
+    <Compile Include="Assets\Scripts\Select Level\level comp\EndLevelScript.cs" />
     <Compile Include="Assets\Scripts\Components Scripts\OnTouchGameObject.cs" />
-    <Compile Include="Assets\Scripts\Components Scripts\RequestSpeechlyByKeyWord.cs" />
+    <Compile Include="Assets\Scripts\Select Level\level comp\UsingTextSpeech.cs" />
     <Compile Include="Assets\Speechly\SpeechlyClient\Segment.cs" />
-    <Compile Include="Assets\Speechly\SpeechlyClient\Token.cs" />
-    <Compile Include="Assets\Scripts\LoadSettings.cs" />
-    <Compile Include="Assets\Speechly\Examples\HandsFreeListeningVR\UseSpeechly.cs" />
     <Compile Include="Assets\Speechly\Examples\PushToTalkButton\UseSpeechly.cs" />
-    <Compile Include="Assets\Speechly\Examples\AudioFileToSpeechly\SpeechlyClientTest\SpeechlyClientTest.cs" />
     <Compile Include="Assets\Speechly\SpeechlyClient\JSON.cs" />
     <Compile Include="Assets\Speechly\Examples\AudioFileToSpeechly\SpeechlyTest.cs" />
     <Compile Include="Assets\Speechly\SpeechlyClient\OnDeviceDecoder.cs" />
-    <Compile Include="Assets\Speechly\SpeechlyClient\SpeechlyClient.cs" />
-    <Compile Include="Assets\Speechly\MicToSpeechly.cs" />
-    <Compile Include="Assets\Scripts\Components Scripts\LevelSoundTrackController.cs" />
     <Compile Include="Assets\Scripts\GameRouter.cs" />
-    <Compile Include="Assets\Scripts\Select Level\level comp\UseTextToSpeech.cs" />
     <Compile Include="Assets\Speechly\SpeechlyClient\Logger.cs" />
     <Compile Include="Assets\Scripts\Components Scripts\OnSubLevelEnded.cs" />
     <Compile Include="Assets\Scripts\Select Level\ChangeLevelPage.cs" />
+    <Compile Include="Assets\Scripts\Select Level\level comp\SpellingValues.cs" />
+    <Compile Include="Assets\Scripts\Components Scripts\LevelButtonScript.cs" />
+    <Compile Include="Assets\Scripts\Components Scripts\toggel_button.cs" />
+    <Compile Include="Assets\Scripts\Select Level\TalkerScript.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\CloudDecoder.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\AudioProcessor.cs" />
+    <Compile Include="Assets\Scripts\GameQuit.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\Types.cs" />
+    <Compile Include="Assets\Scripts\Select Level\level comp\NetworkConnectionChecker.cs" />
+    <Compile Include="Assets\Scripts\Select Level\level comp\GamesRunner.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\Token.cs" />
+    <Compile Include="Assets\Scripts\LoadSettings.cs" />
+    <Compile Include="Assets\Speechly\Examples\HandsFreeListeningVR\UseSpeechly.cs" />
+    <Compile Include="Assets\Speechly\Examples\AudioFileToSpeechly\SpeechlyClientTest\SpeechlyClientTest.cs" />
+    <Compile Include="Assets\Speechly\SpeechlyClient\SpeechlyClient.cs" />
+    <Compile Include="Assets\Speechly\MicToSpeechly.cs" />
+    <Compile Include="Assets\Scripts\Components Scripts\LevelSoundTrackController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Readme.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Speechly\link.xml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Resources\Shaders\OutlineFill.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -760,6 +784,10 @@
       <Project>{2ECA5A6D-8328-8897-0CF0-FD1B170075AD}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
+      <Project>{F57F2809-2914-9EFA-3AFF-153CE6B81E62}</Project>
+      <Name>Unity.TextMeshPro.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Subsystem.Registration.Player.csproj">
       <Project>{0AF8D183-5CD7-DA87-36D2-A27C65E830BA}</Project>
       <Name>Unity.Subsystem.Registration.Player</Name>
@@ -791,6 +819,10 @@
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{7CEC6FA7-C2F1-8DDB-1D71-14AF6CE45AA1}</Project>
       <Name>Unity.Burst.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
+      <Project>{8A6A5F70-8685-D927-C391-B78E368A2E65}</Project>
+      <Name>Unity.Postprocessing.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.Player.csproj">
       <Project>{EDA746CC-32C5-1A80-06D5-C3415338714B}</Project>

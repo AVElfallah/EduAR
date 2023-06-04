@@ -10,6 +10,7 @@ public class GameRouter : MonoBehaviour
     private void Start()
     {
         Application.runInBackground = true;
+        
     }
 
     public void RestartCurrentLevel()

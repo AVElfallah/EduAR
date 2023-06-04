@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Scripts\Outline.cs" />
+     <Compile Include="Assets\Scripts\AndroidNotifications.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\EnergyThresholdVAD.cs" />
      <Compile Include="Assets\Speechly\Examples\PointAndTalk\UseSpeechly.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\AssemblyInfo.cs" />
@@ -746,6 +747,10 @@
       <Project>{2b734cf3-d0b2-4e37-59db-8cb1cbc39098}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Notifications.csproj">
+      <Project>{835f981a-49cc-7aea-757e-830d093edbe3}</Project>
+      <Name>Unity.Notifications</Name>
+    </ProjectReference>
     <ProjectReference Include="AssistantCoreSDKEditor.csproj">
       <Project>{63666b48-67a7-18a5-ef8c-642a578c7f20}</Project>
       <Name>AssistantCoreSDKEditor</Name>
@@ -786,25 +791,21 @@
       <Project>{da0a1da9-4045-5b46-7adf-696cc4d28236}</Project>
       <Name>Meta.WitAi.Conduit</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.ARCore.Editor.csproj">
-      <Project>{47b4dd8a-b4de-d587-cb5b-ccdcfeb56141}</Project>
-      <Name>Unity.XR.ARCore.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.2D.IK.Editor.csproj">
       <Project>{aaa57f05-6b9d-c2de-daad-43e1115e3025}</Project>
       <Name>Unity.2D.IK.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.ARKit.Editor.csproj">
-      <Project>{50431db1-f634-eef9-26d9-399d7c204757}</Project>
-      <Name>Unity.XR.ARKit.Editor</Name>
+    <ProjectReference Include="Unity.XR.ARCore.Editor.csproj">
+      <Project>{47b4dd8a-b4de-d587-cb5b-ccdcfeb56141}</Project>
+      <Name>Unity.XR.ARCore.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
       <Project>{141ccb49-a37e-37a1-574c-af1da62fa3fd}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{64f431cb-861b-6204-1a42-72a7a523f458}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
+    <ProjectReference Include="Unity.XR.ARKit.Editor.csproj">
+      <Project>{50431db1-f634-eef9-26d9-399d7c204757}</Project>
+      <Name>Unity.XR.ARKit.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{9477a335-fa0a-cff6-74b8-ca7ae02dfe09}</Project>
@@ -826,6 +827,10 @@
       <Project>{0bdd4ec0-a99d-ddfb-d67a-0e89b7912a8c}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Notifications.iOS.csproj">
+      <Project>{35959738-05d8-9a56-a052-7413a85c26dd}</Project>
+      <Name>Unity.Notifications.iOS</Name>
+    </ProjectReference>
     <ProjectReference Include="Meta.WitAi.csproj">
       <Project>{008be671-40b9-298e-3716-3e1723e4ed9a}</Project>
       <Name>Meta.WitAi</Name>
@@ -845,6 +850,10 @@
     <ProjectReference Include="Facebook.Wit.Dictation.csproj">
       <Project>{0a4bd484-511d-f3aa-5572-097f484273e2}</Project>
       <Name>Facebook.Wit.Dictation</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
+      <Project>{64f431cb-861b-6204-1a42-72a7a523f458}</Project>
+      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
       <Project>{3bf18617-61f5-33b6-09f8-2193e4a64b94}</Project>
@@ -877,6 +886,10 @@
     <ProjectReference Include="Unity.XR.ARKit.FaceTracking.csproj">
       <Project>{a9514ce4-05a1-2285-6103-f7eec27109e3}</Project>
       <Name>Unity.XR.ARKit.FaceTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Notifications.Android.csproj">
+      <Project>{b59e5969-d30c-075b-1d15-7c166e524013}</Project>
+      <Name>Unity.Notifications.Android</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Editor.csproj">
       <Project>{99efcbed-179f-527e-c6f1-2b37782dbd0e}</Project>

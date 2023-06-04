@@ -1,10 +1,10 @@
-using System.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine;
+using System.Threading.Tasks;
 using Meta.WitAi.TTS.Utilities;
 using Speechly.SLUClient;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class UsingTextSpeech : MonoBehaviour
 {
@@ -31,8 +31,12 @@ public class UsingTextSpeech : MonoBehaviour
     public IEnumerator _StartSpilling(string[] words, GamesRunner gamesRunner)
     {
         audioSource = this.GetComponentInChildren<AudioSource>();
+        var speechlyGameObject = MicToSpeechly.Instance;
+        speechlyClient = MicToSpeechly.Instance.SpeechlyClient;
+        speechlyGameObject.SetActive(false);
 
-        for (int i = 0; i < words.Length; i++) {
+        for (int i = 0; i < words.Length; i++)
+        {
             string currentWord = words[i].ToLower();
             BotText.text = currentWord;
             _speaker.Speak(currentWord);
@@ -40,32 +44,33 @@ public class UsingTextSpeech : MonoBehaviour
             Debug.Log("Waiting for speaker to finish speaking");
             while (_speaker.IsSpeaking || _speaker.IsLoading)
             {
-                
+
 
                 yield return new WaitForSeconds(0.1f);
             }
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(.3f);
             //chenge [isRunning] to true to start listening for the segment
-            
+
             //initialize the filtered text
             string filteredText = "";
             // check for the segment coming from the user
             #region SegmentChange
             //initialize the speechly client
-            
-            speechlyClient = MicToSpeechly.Instance.SpeechlyClient;
+
+
 
 
             isRunning = true;
+            speechlyGameObject.SetActive(true);
             //if(!speechlyClient.IsReady)yield return speechlyClient.Start();
             //start speechly segment
-           // speechlyClient.OnTranscriptChange += (transcript) => TranscriptChangeSe(transcript,ref filteredText);
-            Speechly.Types.SegmentChangeDelegate segmentionChange = (segment)=>SegmentChangeSe(
-                segment,ref filteredText
-                ,ref currentWord
-                ,ref i
-                ,ref words);
-            speechlyClient.OnSegmentChange +=segmentionChange;
+            // speechlyClient.OnTranscriptChange += (transcript) => TranscriptChangeSe(transcript,ref filteredText);
+            Speechly.Types.SegmentChangeDelegate segmentionChange = (segment) => SegmentChangeSe(
+                segment, ref filteredText
+                , ref currentWord
+                , ref i
+                , ref words);
+            speechlyClient.OnSegmentChange += segmentionChange;
             speechlyClient.AdjustAudioProcessor();
             #endregion
             // to make the application wait for user spilling and didn't go to the next word
@@ -79,16 +84,15 @@ public class UsingTextSpeech : MonoBehaviour
             Debug.Log("Waiting for user to spill the word");
             while (!(filteredText == currentWord || filteredText.Contains(currentWord)))
             {
-                
+
                 yield return waitForSomeTime(0.1f);
             }
-            
 
-            
-            speechlyClient.OnSegmentChange -=segmentionChange;
+
+            speechlyClient.OnSegmentChange -= segmentionChange;
             speechlyClient.Update();
 
-            Debug.Log("out of "+speechlyClient.IsActive );
+            Debug.Log("out of " + speechlyClient.IsActive);
             yield return waitForSomeTime(1f);
             //Debug.Log("out of while loop = " + x);
             isRunning = false;
@@ -100,6 +104,7 @@ public class UsingTextSpeech : MonoBehaviour
                 yield return waitForSomeTime(1f);
             }
             ChildText.text = "- - -";
+            speechlyGameObject.SetActive(false);
         }
         Debug.Log("out of for loop ");
         ChildText.text = "- - -";
@@ -138,44 +143,46 @@ public class UsingTextSpeech : MonoBehaviour
         }
     }
 
-private void SegmentChangeSe(Segment segment,ref string filteredText,ref string currentWord,ref int i,ref string[] words) 
-            {
-                try
-                {
-                    //filter the text coming from the user
+    private void SegmentChangeSe(Segment segment, ref string filteredText, ref string currentWord, ref int i, ref string[] words)
+    {
+        try
+        {
+            //filter the text coming from the user
 
-                    if (words.Length > 0 && i < words.Length&&segment.isFinal)
-                    {
-                        filteredText = segment.ToString(
-                        (v) => ""
-                        , (a, c) => ""
-                        , "").Trim(' '
-                        ).ToLower();
-                        //check if the filtered text is equal to the current word
-                        // if it is not equal, then display the text as listening on the bot's text
-                        // to let user know that the bot is listening
-                        bool isEquals = filteredText == currentWord;
-                        bool isContains = filteredText.Contains(currentWord);
-                        if ((isEquals) || (isContains))
-                        {
-                            // display the filtered text on the child's text
-                            ChildText.text = currentWord;
-                            // stop listening for the segment
-                        }
-                        else
-                        {
-                            // if it is not equal, then display the text as listening on the bot's text
-                            ChildText.text = "Lestening...";
-                        }
-                    }
-                    // this line is used to display the current word on the console 
-                    // to check if the current word is equal to the filtered text
-                    Debug.Log("Current word: " + filteredText);
+            if (words.Length > 0 && i < words.Length && segment.isFinal)
+            {
+                filteredText = segment.ToString(
+                (v) => ""
+                , (a, c) => ""
+                , "").Trim(' '
+                ).ToLower();
+                //check if the filtered text is equal to the current word
+                // if it is not equal, then display the text as listening on the bot's text
+                // to let user know that the bot is listening
+                bool isEquals = filteredText == currentWord;
+                bool isContains = filteredText.Contains(currentWord);
+                if ((isEquals) || (isContains))
+                {
+                    // display the filtered text on the child's text
+                    ChildText.text = currentWord;
+                    // stop listening for the segment
                 }
-                finally { }
+                else
+                {
+                    // if it is not equal, then display the text as listening on the bot's text
+                    ChildText.text = "Lestening...";
+                }
             }
-    private void OnDestroy() {
-        if(speechlyClient!=null){
+            // this line is used to display the current word on the console 
+            // to check if the current word is equal to the filtered text
+            Debug.Log("Current word: " + filteredText);
+        }
+        finally { }
+    }
+    private void OnDestroy()
+    {
+        if (speechlyClient != null)
+        {
             speechlyClient.Stop();
             speechlyClient.StopStream();
             speechlyClient = null;

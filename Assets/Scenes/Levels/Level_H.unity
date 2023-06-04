@@ -1313,6 +1313,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478372606}
   m_CullTransparentMesh: 1
+--- !u!1 &493961588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493961589}
+  - component: {fileID: 493961590}
+  m_Layer: 0
+  m_Name: mic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &493961589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493961588}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1474086944}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &493961590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493961588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6b6837b89e74c51819907efcc77c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeechlyEnv: 0
+  AppId: f8700f9c-6a83-4598-acef-025f17cb02df
+  CaptureDeviceName: 
+  ModelBundle: dummy.bundle
+  DebugPrint: 0
+  AudioProcessorSettings:
+    InputSampleRate: 16000
+    InternalSampleRate: 16000
+    FrameMillis: 30
+    HistoryFrames: 8
+    VADControlsListening: 1
+    VADSettings:
+      SignalToNoiseDb: 3
+      NoiseGateDb: -24
+      NoiseLearnHalftimeMillis: 400
+      SignalSearchFrames: 5
+      SignalActivation: 0.7
+      SignalRelease: 0.2
+      SignalSustainMillis: 3000
+  SpeechRecognitionSettings:
+    SilenceSegmentationMillis: 720
+    BoostVocabulary:
+      Vocabulary: 
+      Weight: 0
+  Output:
+    IsSignalDetected: 0
+    SignalDb: 0
+    NoiseLevelDb: 0
 --- !u!1 &506587419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,7 +1972,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 83f5b1527e4e58a4db2b0e2065cc4c79, type: 3}
   audioSource: {fileID: 521461165}
   text: {fileID: 1752401822}
-  levelNumber: 6
+  levelNumber: 7
 --- !u!1 &698014605
 GameObject:
   m_ObjectHideFlags: 0
@@ -4072,7 +4144,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1474086944}
-  - component: {fileID: 1474086943}
   - component: {fileID: 1474086946}
   m_Layer: 0
   m_Name: Speechly
@@ -4081,46 +4152,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1474086943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474086941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f6b6837b89e74c51819907efcc77c50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpeechlyEnv: 0
-  AppId: f8700f9c-6a83-4598-acef-025f17cb02df
-  CaptureDeviceName: 
-  ModelBundle: dummy.bundle
-  DebugPrint: 0
-  AudioProcessorSettings:
-    InputSampleRate: 16000
-    InternalSampleRate: 16000
-    FrameMillis: 30
-    HistoryFrames: 8
-    VADControlsListening: 1
-    VADSettings:
-      SignalToNoiseDb: 3
-      NoiseGateDb: -24
-      NoiseLearnHalftimeMillis: 400
-      SignalSearchFrames: 5
-      SignalActivation: 0.7
-      SignalRelease: 0.2
-      SignalSustainMillis: 3000
-  SpeechRecognitionSettings:
-    SilenceSegmentationMillis: 720
-    BoostVocabulary:
-      Vocabulary: 
-      Weight: 0
-  Output:
-    IsSignalDetected: 0
-    SignalDb: 0
-    NoiseLevelDb: 0
 --- !u!4 &1474086944
 Transform:
   m_ObjectHideFlags: 0
@@ -4134,6 +4165,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1597225489}
+  - {fileID: 493961589}
   m_Father: {fileID: 2049599108}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5560,7 +5592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1814952275}
   m_Layer: 6
-  m_Name: -------Fish-----------
+  m_Name: ----------------------
   m_TagString: comment
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -6390,7 +6422,7 @@ PrefabInstance:
     - target: {fileID: 7621003542278302641, guid: 393a226d4275759488db29445436cf7f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7621003542278302641, guid: 393a226d4275759488db29445436cf7f,
         type: 3}
@@ -6596,7 +6628,7 @@ PrefabInstance:
     - target: {fileID: 7621003542278302641, guid: 393a226d4275759488db29445436cf7f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7621003542278302641, guid: 393a226d4275759488db29445436cf7f,
         type: 3}
@@ -7134,7 +7166,7 @@ PrefabInstance:
     - target: {fileID: 3639852099015169839, guid: d7b3ebc839f1cf743b727ed9cf547915,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3639852099015169839, guid: d7b3ebc839f1cf743b727ed9cf547915,
         type: 3}
@@ -7195,6 +7227,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955062655646034603, guid: d7b3ebc839f1cf743b727ed9cf547915,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7233756163173485908, guid: d7b3ebc839f1cf743b727ed9cf547915,
         type: 3}
@@ -7435,7 +7472,7 @@ PrefabInstance:
     - target: {fileID: 6431370255557734242, guid: f23d4ce340aa28e46b0924f79e86052d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6431370255557734242, guid: f23d4ce340aa28e46b0924f79e86052d,
         type: 3}
@@ -7670,7 +7707,7 @@ PrefabInstance:
     - target: {fileID: 7621003542278302641, guid: 393a226d4275759488db29445436cf7f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7621003542278302641, guid: 393a226d4275759488db29445436cf7f,
         type: 3}
@@ -7834,7 +7871,7 @@ PrefabInstance:
     - target: {fileID: 7716660055292419158, guid: 7c9bda90c9f50ce4b823afb502fb9625,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7716660055292419158, guid: 7c9bda90c9f50ce4b823afb502fb9625,
         type: 3}

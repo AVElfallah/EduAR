@@ -8,24 +8,29 @@ public class LoadSettings : MonoBehaviour
     //to change toggel state depend on settings was loaded from player prefs
     // we use [toggel_button] to do this event
     public toggel_button toggel;
+    public toggel_button toggle_notification;
     private bool isSoundOn;
+    private bool isNotificationOn;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+
         try
         {
             checkAndSetSound();
+            checkAndSetNotification();
             var tof = toggel.gameObject.GetComponent<toggel_button>();
+            var tof_notification = toggle_notification.gameObject.GetComponent<toggel_button>();
             tof.ClickWithValue(isSoundOn);
+            tof_notification.ClickWithValue(isNotificationOn);
 
         }
-        catch (Exception e )
+        catch (Exception e)
         {
             Debug.LogWarning(
-                e.ToString() 
-                ); 
+                e.ToString()
+                );
         }
     }
 
@@ -33,9 +38,23 @@ public class LoadSettings : MonoBehaviour
     void Update()
     {
         checkAndSetSound();
+        checkAndSetNotification();
     }
 
-    // this function is used to get game_sound satate or set it if not found
+    private void checkAndSetNotification()
+    {
+        if (PlayerPrefs.HasKey("notification"))
+        {
+            isNotificationOn = PlayerPrefs.GetInt("notification") == 1 ? true : false;
+        }
+        else
+        {
+            PlayerPrefs.SetInt("notification", 1);
+            PlayerPrefs.Save();
+            isNotificationOn = true;
+        }
+    }
+
 
     private void checkAndSetSound()
     {
@@ -45,17 +64,19 @@ public class LoadSettings : MonoBehaviour
             // check if game_sound key was setting before
             if (PlayerPrefs.HasKey("game_sound"))
             {
-              isSoundOn = PlayerPrefs.GetInt("game_sound") == 1 ? true : false;
-                
-                if (isSoundOn && !aud.isPlaying) {
-                    
+                isSoundOn = PlayerPrefs.GetInt("game_sound") == 1 ? true : false;
+
+                if (isSoundOn && !aud.isPlaying)
+                {
+
                     aud.Play();
-                   
+
                 }
-                else if(!isSoundOn && aud.isPlaying) {
+                else if (!isSoundOn && aud.isPlaying)
+                {
                     aud.Pause();
 
-                   
+
                 }
             }
             //if game_sound not setting we reset it 
