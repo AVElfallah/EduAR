@@ -71,6 +71,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level_S.unity
     guid: 8a88aee59ada53e4db93363cc30feb76
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_T.unity
+    guid: 0c50d855ab7728d4a8d1d2ee9bca5531
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_U.unity
+    guid: 22ffb364bbc2baa41a983837cbbd6d8d
+  - enabled: 1
+    path: Assets/RewardGames/RewardGame_1/Scenes/run_game.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/RewardGames/RewardGame_2/Scenes/daino_game.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

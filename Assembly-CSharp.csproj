@@ -38,11 +38,14 @@
   <ItemGroup>
      <Compile Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Scripts\AndroidNotifications.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\EnergyThresholdVAD.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_2\Scripts\GameManager.cs" />
      <Compile Include="Assets\Speechly\Examples\PointAndTalk\UseSpeechly.cs" />
      <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\AssemblyInfo.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\AudioTools.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\IDecoder.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_2\Scripts\Ground.cs" />
      <Compile Include="Assets\Scripts\button_click_sound.cs" />
      <Compile Include="Assets\Scripts\Select Level\level comp\FindHiddenObjects.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\Platform.cs" />
@@ -50,59 +53,104 @@
      <Compile Include="Assets\Scripts\Select Level\level comp\HideShowMenu.cs" />
      <Compile Include="Assets\Speechly\Examples\HandsFreeListening\UseSpeechly.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\WSClient.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\Joystick Pack\Examples\JoystickPlayerExample.cs" />
      <Compile Include="Assets\Scripts\Select Level\level comp\EndLevelScript.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
      <Compile Include="Assets\Scripts\Components Scripts\OnTouchGameObject.cs" />
      <Compile Include="Assets\Scripts\Select Level\level comp\UsingTextSpeech.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\GameManager.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\Segment.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_2\Scripts\Player.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\PropMaker\Tools\Tools\ExtensionMethods.cs" />
      <Compile Include="Assets\Speechly\Examples\PushToTalkButton\UseSpeechly.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\JSON.cs" />
      <Compile Include="Assets\Speechly\Examples\AudioFileToSpeechly\SpeechlyTest.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\OnDeviceDecoder.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\PropMaker\Tools\Tools\Parabola.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\Scripts\GameRouter.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\Logger.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\PropMaker\Tools\Tools\DataTypes.cs" />
      <Compile Include="Assets\Scripts\Components Scripts\OnSubLevelEnded.cs" />
      <Compile Include="Assets\Scripts\Select Level\ChangeLevelPage.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_2\Scripts\Obstacle.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_2\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Select Level\level comp\SpellingValues.cs" />
      <Compile Include="Assets\Scripts\Components Scripts\LevelButtonScript.cs" />
      <Compile Include="Assets\Scripts\Components Scripts\toggel_button.cs" />
      <Compile Include="Assets\Scripts\Select Level\TalkerScript.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\CloudDecoder.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\AudioProcessing\AudioProcessor.cs" />
      <Compile Include="Assets\Scripts\GameQuit.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\PropMaker\Scripts\Prop.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_2\Scripts\AnimatedSprite.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\Types.cs" />
      <Compile Include="Assets\Scripts\Select Level\level comp\NetworkConnectionChecker.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\PropMaker\Tools\Tools\Helper.cs" />
      <Compile Include="Assets\Scripts\Select Level\level comp\GamesRunner.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\Scripts\CameraControl.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\Joystick Pack\Scripts\Base\Joystick.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\Token.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\Scripts\Actions.cs" />
      <Compile Include="Assets\Scripts\LoadSettings.cs" />
      <Compile Include="Assets\Speechly\Examples\HandsFreeListeningVR\UseSpeechly.cs" />
      <Compile Include="Assets\Speechly\Examples\AudioFileToSpeechly\SpeechlyClientTest\SpeechlyClientTest.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\Joystick Pack\Examples\JoystickSetterExample.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\PropMaker\Scripts\Ladder.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\GameMaster.cs" />
      <Compile Include="Assets\Speechly\SpeechlyClient\SpeechlyClient.cs" />
      <Compile Include="Assets\Speechly\MicToSpeechly.cs" />
+     <Compile Include="Assets\RewardGames\RewardGame_1\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Components Scripts\LevelSoundTrackController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\RewardGames\RewardGame_1\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\RewardGames\RewardGame_1\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\RewardGames\RewardGame_1\Free Stylized Skybox\ReadMe.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Readme.txt" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Speechly\link.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\Speechly\Examples\PointAndTalk\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\RewardGames\RewardGame_2\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity Hub\2021.3.16f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -851,6 +899,10 @@
       <Project>{0a4bd484-511d-f3aa-5572-097f484273e2}</Project>
       <Name>Facebook.Wit.Dictation</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{912a0ff8-05a9-be1d-3649-98c977dee887}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
       <Project>{64f431cb-861b-6204-1a42-72a7a523f458}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
@@ -963,6 +1015,10 @@
       <Project>{edfd8595-8499-2941-3ea3-b6d70e714443}</Project>
       <Name>Unity.VisualScripting.Core.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{456314e4-52ab-7613-bf86-2e06e2926fd2}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
       <Project>{92040c93-d861-c12a-c8da-276966a9c6ca}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
@@ -1018,6 +1074,10 @@
     <ProjectReference Include="VoiceSDK.Editor.csproj">
       <Project>{a13e303b-2462-7a40-14a3-b5f226454db7}</Project>
       <Name>VoiceSDK.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{d24af5e1-f605-8c3a-0a60-1fb2e8178fa7}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
       <Project>{ddc812f2-636d-7276-e18c-7fd3c9ac3e52}</Project>

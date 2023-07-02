@@ -2298,11 +2298,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speaker: {fileID: 1705057263}
+  levelNumber: 0
   gameRouter: {fileID: 1729367028}
   clip: {fileID: 8300000, guid: 83f5b1527e4e58a4db2b0e2065cc4c79, type: 3}
   audioSource: {fileID: 521461165}
   text: {fileID: 1752401822}
-  levelNumber: 0
 --- !u!1 &738373005
 GameObject:
   m_ObjectHideFlags: 0

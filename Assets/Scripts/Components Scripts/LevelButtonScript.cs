@@ -22,7 +22,7 @@ public class LevelButtonScript : MonoBehaviour
         enabledLevelBtn
             .GetComponent<Button>()
             .onClick.AddListener(
-                delegate()
+                delegate ()
                 {
                     toLevel();
                 }
@@ -37,7 +37,7 @@ public class LevelButtonScript : MonoBehaviour
         }
         catch (Exception ec)
         {
-            Debug.LogError(ec);
+            Debug.Log(ec);
         }
     }
 

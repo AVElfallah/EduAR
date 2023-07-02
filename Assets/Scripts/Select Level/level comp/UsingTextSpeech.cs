@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Meta.WitAi.TTS.Utilities;
 using Speechly.SLUClient;
 using UnityEngine;
@@ -11,22 +9,17 @@ public class UsingTextSpeech : MonoBehaviour
     public Slider SliderEnergy;
     /// Creates and initializes a base sliders wrapper. This is used to set the baseline
     public Slider SliderBaselineEnergy;
-
     /// Gets the bot text. This is used to display the bot's text
     public Text BotText;
     /// Gets the child text. This is used to display the child's text
     public Text ChildText;
-
-
     /// Called when the speaker is added to the game. This is where you can set the speakers
     public TTSSpeaker _speaker;
     /// Creates and returns a verygod clip. This is used to play the verygod clip
     public AudioClip verygodClip;
-
     private SpeechlyClient speechlyClient;
     private AudioSource audioSource;
     bool isRunning = false;
-
     public void StartSpilling(string[] words, GamesRunner gamesRunner) => StartCoroutine(_StartSpilling(words, gamesRunner));
     public IEnumerator _StartSpilling(string[] words, GamesRunner gamesRunner)
     {
@@ -34,7 +27,6 @@ public class UsingTextSpeech : MonoBehaviour
         var speechlyGameObject = MicToSpeechly.Instance;
         speechlyClient = MicToSpeechly.Instance.SpeechlyClient;
         speechlyGameObject.SetActive(false);
-
         for (int i = 0; i < words.Length; i++)
         {
             string currentWord = words[i].ToLower();
@@ -43,29 +35,21 @@ public class UsingTextSpeech : MonoBehaviour
             //wait for the speaker to finish speaking
             Debug.Log("Waiting for speaker to finish speaking");
             while (_speaker.IsSpeaking || _speaker.IsLoading)
-            {
-
-
-                yield return new WaitForSeconds(0.1f);
-            }
+            { yield return new WaitForSeconds(0.1f); }
             yield return new WaitForSeconds(.3f);
             //chenge [isRunning] to true to start listening for the segment
-
             //initialize the filtered text
             string filteredText = "";
             // check for the segment coming from the user
             #region SegmentChange
             //initialize the speechly client
-
-
-
-
             isRunning = true;
             speechlyGameObject.SetActive(true);
             //if(!speechlyClient.IsReady)yield return speechlyClient.Start();
             //start speechly segment
             // speechlyClient.OnTranscriptChange += (transcript) => TranscriptChangeSe(transcript,ref filteredText);
-            Speechly.Types.SegmentChangeDelegate segmentionChange = (segment) => SegmentChangeSe(
+            Speechly.Types.SegmentChangeDelegate segmentionChange =
+            (segment) => SegmentChangeSe(
                 segment, ref filteredText
                 , ref currentWord
                 , ref i
@@ -84,14 +68,10 @@ public class UsingTextSpeech : MonoBehaviour
             Debug.Log("Waiting for user to spill the word");
             while (!(filteredText == currentWord || filteredText.Contains(currentWord)))
             {
-
                 yield return waitForSomeTime(0.1f);
             }
-
-
             speechlyClient.OnSegmentChange -= segmentionChange;
             speechlyClient.Update();
-
             Debug.Log("out of " + speechlyClient.IsActive);
             yield return waitForSomeTime(1f);
             //Debug.Log("out of while loop = " + x);
@@ -109,37 +89,25 @@ public class UsingTextSpeech : MonoBehaviour
         Debug.Log("out of for loop ");
         ChildText.text = "- - -";
         //run hidin object script and show the counter
-
         isRunning = false;
-
-
         gamesRunner.RunTheNewGame();
-
         speechlyClient = null;
         yield return null;
     }
-
-
-
     IEnumerator waitForSomeTime(float timeout)
     {
         yield return new WaitForSeconds(timeout);
     }
-
     private void Update()
     {
         if (isRunning)
         {
             try
             {
-
                 SliderBaselineEnergy.value = speechlyClient.Output.NoiseLevelDb;
                 SliderEnergy.value = speechlyClient.Output.NoiseLevelDb + speechlyClient.Output.SignalDb;
             }
-            finally
-            {
-
-            }
+            finally { }
         }
     }
 
@@ -147,8 +115,6 @@ public class UsingTextSpeech : MonoBehaviour
     {
         try
         {
-            //filter the text coming from the user
-
             if (words.Length > 0 && i < words.Length && segment.isFinal)
             {
                 filteredText = segment.ToString(

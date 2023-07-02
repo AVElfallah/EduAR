@@ -1,29 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class button_click_sound : MonoBehaviour
 {
     public AudioSource audioS;
+    /// Play sound when mouse click on button Sound is played in main window and not in window's
     public void clickSound()
     {
         try
         {
             audioS.Play();
-        }catch(System.Exception e)
+        }
+        catch (System.Exception e)
         {
             Debug.Log(e);
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-    
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
