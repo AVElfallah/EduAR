@@ -1,4 +1,7 @@
-# EduAR 🤳🦙  <a href="url" style="height=50px;width=50px;"><img src="Assets\Components\Images\game_logo.png" align="left" height="100%" width="100%" ></a>
+# EduAR 🤳🦙 <br>
+
+<img src="project\Assets\Components\Images\game_logo.png" align="left" height="100%" width="100%" >
+</br>
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
