@@ -89,31 +89,31 @@ move away from traditional methods.**
 - *Game Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\gamesc.png" align="center" height="250" width="800"  ></a>
+   <a href="url"><img src="analysis\gamesc.png" align="center" height="250" width="600"  ></a>
 </div>
 
 - *Reward Game Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\rgame_1.png" align="center" height="250" width="800"  ></a>
+   <a href="url"><img src="analysis\rgame_1.png" align="center" height="250" width="600"  ></a>
 </div>
 
 - *Main Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\mainsc.png" align="center"  height="250" width="800"  ></a>
+   <a href="url"><img src="analysis\mainsc.png" align="center"  height="250" width="600"  ></a>
 </div>
 
 - *Settings Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\settingssc.png" align="center"  height="250" width="800"  ></a>
+   <a href="url"><img src="analysis\settingssc.png" align="center"  height="250" width="600"  ></a>
 </div>
 
 - *Select Level Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\select_level.png" align="center"  height="250" width="800"  ></a>
+   <a href="url"><img src="analysis\select_level.png" align="center"  height="250" width="600"  ></a>
 </div>
 
 #
@@ -122,10 +122,30 @@ move away from traditional methods.**
 - **The first part is the game, which is the main part of the system, and it is responsible for teaching the child the pronunciation of letters and words.**
 
 - **The second part is the settings, which is responsible for controlling the game settings, such as the volume of the game, the difficulty level, and the language of the game.**
-- **Wireframe**
+
+- **Wireframes**
+<div class="container">
 <div>
-    <a href="url"><img src="analysis\wireframe.png" align="center" height="250" width="800"  ></a>
+    <a href="url"><img src="analysis\mainsc_w.png" align="center" height="350" width="800"  ></a>
 </div>
+
+<div>
+    <a href="url"><img src="analysis\select_level_w.png" align="center" height="250" width="600"  ></a>
+</div>
+</br>
+<div>
+    <a href="url"><img src="analysis\gamesc_w.png" align="center" height="250" width="600"  ></a>
+</div>
+</br>
+<div>
+    <a href="url"><img src="analysis\connection.png" align="center" height="250" width="600"  ></a>
+</div>
+</br>
+<div>
+    <a href="url"><img src="analysis\pua_w.png" align="center" height="250" width="600"  ></a>
+</div>
+</div>
+<br>
 
 - **Digrams**
 
@@ -170,4 +190,3 @@ move away from traditional methods.**
     <a href="url"><img src="analysis\interact_d.png" align="center" height="350" width="800"  ></a>
 </div>
 
-#
