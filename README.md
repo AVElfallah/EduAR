@@ -58,7 +58,7 @@ move away from traditional methods.**
 
 - **Ali Saafan** 🎶 <br> [<a href="url"><img src="analysis\facebook.png" align="center" height="20" width="20"  >](https://www.facebook.com/profile.php?id=100006005415521)
 [<a href="url"><img src="analysis\linkedin.png" align="center" height="20" width="20"  >](https://www.linkedin.com/in/ali-safan-269b95240/)
-[<img src="analysis\instagram.png" align="center" height="20" width="20"  >](https://www.instagram.com/alisafan625/)
+[<img src="analysis\github.png" align="center" height="20" width="20"  >](https://github.com/safan777)
 
 
 
