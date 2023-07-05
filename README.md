@@ -109,7 +109,7 @@ move away from traditional methods.**
 - *Settings Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\settingssc.png" align="center"  height="250" width="600"  ></a>
+   <a href="url"><img src="analysis\s_s.png" align="center"  height="250" width="600"  ></a>
 </div>
 
 
@@ -130,7 +130,7 @@ move away from traditional methods.**
 
 <div class="container">
 <div>
-    <a href="url"><img src="analysis\mainsc_w.png" align="center" height="450" width="600"  ></a>
+    <a href="url"><img src="analysis\mainsc_w.png" align="center" height="250" width="600"  ></a>
 </div>
 
 <div>
