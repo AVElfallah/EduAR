@@ -1,4 +1,4 @@
-# EduAR 🤳🦙  <a href="url" style="height=100px;width=100px;"><img src="Assets\Components\Images\game_logo.png" align="left" height="100%" width="100%" ></a>
+# EduAR 🤳🦙  <a href="url" style="height=50px;width=50px;"><img src="Assets\Components\Images\game_logo.png" align="left" height="100%" width="100%" ></a>
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
@@ -33,7 +33,6 @@ move away from traditional methods.**
 
 - **[Project Powerpoint Presentation](analysis/eduar_presentation.pptx)** 🏘🌠
 
-- **[Project Video Presentation](https://drive.google.com/file/d/1QZ3Z3Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2/view?usp=sharing)** 🏘🌠 
 <!-- <a href="url"><img src="analysis\facebook.png" align="center" height="20" width="20"  ></a> -->
 
 #
@@ -90,31 +89,31 @@ move away from traditional methods.**
 - *Game Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\gamesc.png" align="center" height="240" width="800"  ></a>
+   <a href="url"><img src="analysis\gamesc.png" align="center" height="250" width="800"  ></a>
 </div>
 
 - *Reward Game Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\rgame_1.png" align="center" height="240" width="800"  ></a>
+   <a href="url"><img src="analysis\rgame_1.png" align="center" height="250" width="800"  ></a>
 </div>
 
 - *Main Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\mainsc.png" align="center"  height="240" width="800"  ></a>
+   <a href="url"><img src="analysis\mainsc.png" align="center"  height="250" width="800"  ></a>
 </div>
 
 - *Settings Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\settingssc.png" align="center"  height="240" width="800"  ></a>
+   <a href="url"><img src="analysis\settingssc.png" align="center"  height="250" width="800"  ></a>
 </div>
 
 - *Select Level Screen*
 
 <div align='center'>
-   <a href="url"><img src="analysis\select_level.png" align="center"  height="240" width="800"  ></a>
+   <a href="url"><img src="analysis\select_level.png" align="center"  height="250" width="800"  ></a>
 </div>
 
 #
@@ -123,8 +122,13 @@ move away from traditional methods.**
 - **The first part is the game, which is the main part of the system, and it is responsible for teaching the child the pronunciation of letters and words.**
 
 - **The second part is the settings, which is responsible for controlling the game settings, such as the volume of the game, the difficulty level, and the language of the game.**
+- **Wireframe**
+<div>
+    <a href="url"><img src="analysis\wireframe.png" align="center" height="250" width="800"  ></a>
+</div>
 
 - **Digrams**
+
 - *Context Diagram*
 <div>
     <a href="url"><img src="analysis\context_d.jpg" align="center" height="450" width="800"  ></a>
