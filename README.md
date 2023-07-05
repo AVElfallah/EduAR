@@ -57,6 +57,7 @@ move away from traditional methods.**
 [<img src="analysis\linkedin.png" align="center" height="20" width="20"  >](https://www.linkedin.com/in/omar-sobhy-b97a12195/)
 
 - **Ali Saafan** 🎶 <br> [<a href="url"><img src="analysis\facebook.png" align="center" height="20" width="20"  >](https://www.facebook.com/profile.php?id=100006005415521)
+[<a href="url"><img src="analysis\linkedin.png" align="center" height="20" width="20"  >](https://www.linkedin.com/in/ali-safan-269b95240/)
 [<img src="analysis\instagram.png" align="center" height="20" width="20"  >](https://www.instagram.com/alisafan625/)
 
 
@@ -132,7 +133,7 @@ move away from traditional methods.**
 <div>
     <a href="url"><img src="analysis\mainsc_w.png" align="center" height="250" width="600"  ></a>
 </div>
-
+</br>
 <div>
     <a href="url"><img src="analysis\select_level_w.png" align="center" height="250" width="600"  ></a>
 </div>
