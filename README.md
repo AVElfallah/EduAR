@@ -33,6 +33,8 @@ move away from traditional methods.**
 
 - **[Project Powerpoint Presentation](analysis/eduar_presentation.pptx)** 🏘🌠
 
+- **[Project banner](analysis/banner.pdf)** 🏘🌠
+
 <!-- <a href="url"><img src="analysis\facebook.png" align="center" height="20" width="20"  ></a> -->
 
 #
@@ -110,6 +112,7 @@ move away from traditional methods.**
    <a href="url"><img src="analysis\settingssc.png" align="center"  height="250" width="600"  ></a>
 </div>
 
+
 - *Select Level Screen*
 
 <div align='center'>
@@ -124,9 +127,10 @@ move away from traditional methods.**
 - **The second part is the settings, which is responsible for controlling the game settings, such as the volume of the game, the difficulty level, and the language of the game.**
 
 - **Wireframes**
+
 <div class="container">
 <div>
-    <a href="url"><img src="analysis\mainsc_w.png" align="center" height="350" width="800"  ></a>
+    <a href="url"><img src="analysis\mainsc_w.png" align="center" height="450" width="600"  ></a>
 </div>
 
 <div>
